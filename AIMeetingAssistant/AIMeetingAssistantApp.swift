@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct AIMeetingAssistantApp: App {
+    @StateObject private var store = MeetingStore()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(store)
         }
     }
 }
